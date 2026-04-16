@@ -1,0 +1,19 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Clone') {
+            steps {
+              checkout scm
+              
+            }
+        }
+        stage('Construction image') {
+            steps {
+                echo 'commande en cours...'
+                 sh 'docker build -t todo_app .'
+            }
+        }
+        
+    }
+}
