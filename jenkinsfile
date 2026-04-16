@@ -11,7 +11,7 @@ pipeline {
         stage('Construction image') {
             steps {
                 echo 'commande en cours...'
-                 sh 'docker build -t todo_app .'
+                 sh '/usr/local/bin/docker build -t todo_app .'
             }
         }
         
